@@ -45,8 +45,20 @@ class RelatorioFinanceiro(models.Model):
 
 
 class Suprimento(models.Model):
+    paciente = models.ForeignKey(
+        'usuarios.Paciente',
+        on_delete=models.CASCADE,
+        related_name='suprimentos'
+    )
+
     nome = models.CharField(max_length=100)
     quantidade = models.IntegerField(default=0)
+    registrado_por = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return f"{self.nome} - {self.quantidade} unidades"

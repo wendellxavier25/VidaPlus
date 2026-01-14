@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Leito, Internacao, RelatorioFinanceiro, Suprimento, UnidadeSaude
 
-# Register your models here.
+admin.site.register(Leito)
+admin.site.register(Internacao)
+admin.site.register(RelatorioFinanceiro)
+admin.site.register(Suprimento)
+admin.site.register(UnidadeSaude)

@@ -27,4 +27,4 @@ class Prescricao(models.Model):
     profissonal = models.ForeignKey(Profissional, on_delete=models.CASCADE)
     texto = models.TextField()
     assinatura_digital = models.CharField(max_length=200)
-    criado_em = models.DateTimeField(auto_now_add=True)
+    criado_em = models.DateTimeField(auto_now_add=True) 

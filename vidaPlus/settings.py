@@ -29,11 +29,12 @@ INSTALLED_APPS = [
     'rest_framework',
     "rest_framework.authtoken",
     "channels",
-    'atendimento',
-    'hospital',
-    'profissionais',
+    
     'usuarios',
-    'telemedicina'
+    'profissionais',
+    'hospital',
+    'atendimento',
+    'telemedicina',
 ]
 
 REST_FRAMEWORK = {
